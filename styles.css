@@ -60,3 +60,9 @@ hr{
     cursor: pointer;
     color: black;
 }
+
+@media (max-width: 768px) {
+  .container-cal{
+    width: 80%;
+  }
+}
