@@ -54,9 +54,11 @@ hr{
     padding: 10%;
     font-size: 17px;
     color: gray;
+    transition: 0.2s ease-in-out;
 }
 .btn:hover{
     background-color: orange;
+    transform: translateY(-3px);
     cursor: pointer;
     color: black;
 }
