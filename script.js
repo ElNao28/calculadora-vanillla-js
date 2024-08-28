@@ -20,9 +20,17 @@ const result = document.getElementById("=");
 const decimal = document.getElementById(".");
 const mode = document.getElementById("mode");
 const pather = document.getElementById("pather");
-mode.addEventListener('click',()=>{
-  pather.classList.toggle('white');
-})
+mode.addEventListener("click", () => {
+  let isWhite = pather.classList.item('white');
+  console.log(isWhite);
+  if (isWhite === "white" && isWhite !== null) {
+    pather.classList.remove("white");
+    pather.classList.add("black");
+  } else {
+    pather.classList.remove("black");
+    pather.classList.add("white");
+  }
+});
 const insertValues = (value) => {
   if (input.value.length === 1) {
     const inputVal = parseInt(input.value);
