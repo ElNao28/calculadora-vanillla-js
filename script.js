@@ -74,8 +74,9 @@ const checkOperator = (value) => {
   }
   return false;
 };
-const setResultOperation = () => {
-  let operator = "";
+result.addEventListener("click", () => {
+  console.log("entra");
+  let operator;
   for (let i = 0; i < input.value.length; i++) {
     if (
       input.value[i] === "%" ||
@@ -84,17 +85,40 @@ const setResultOperation = () => {
       input.value[i] === "-" ||
       input.value[i] === "+"
     ) {
-        operator = input.value[i];
-      break;
-    }
-    let inputS = input.value.split("+");
-    if (inputS.length === 2 && inputS[1] !== "") {
-      const cant1 = parseInt(inputS[0]);
-      const cant2 = parseInt(inputS[1]);
-      input.value = cant1 + cant2;
+      operator = input.value[i];
+      console.log("entra aqui");
+      const inputS = input.value.split(operator);
+      if (inputS.length === 2) {
+        console.log("entra aqui de nuevo");
+        const cant1 = parseInt(inputS[0]);
+        const cant2 = parseInt(inputS[1]);
+        switch (operator) {
+          case "+":
+            input.value = cant1 + cant2;
+            break;
+          case "-":
+            input.value = cant1 - cant2;
+            break;
+          case "*":
+            input.value = cant1 * cant2;
+            break;
+          case "/":
+            if (cant2 === 0) {
+              alert("Error: Division por cero");
+              input.value = "0";
+              return;
+            }
+            input.value = cant1 / cant2;
+            break;
+          case "%":
+            input.value = cant1 % cant2;
+            break;
+        }
+        return false;
+      }
     }
   }
-};
+});
 suma.addEventListener("click", () => {
   let isFoundOperation = checkOperator("+");
   if (!isFoundOperation) input.value += "+";
