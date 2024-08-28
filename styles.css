@@ -1,0 +1,62 @@
+body {
+  background-color: rgb(19, 19, 19);
+}
+.container {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  flex-direction: column;
+}
+.container-cal {
+  background-color: white;
+  padding: 30px;
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px 5px rgba(97, 160, 255, 0.733);
+  border: 2px rgba(54, 129, 241, 0.637) solid;
+  overflow: hidden;
+}
+h1 {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+  font-size: 30px;
+}
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 25px;
+  font-family: monospace;
+  color:gray;
+}
+input:focus {
+  outline: none;
+}
+hr{
+    width: 100%;
+    border:0.1px solid rgba(0, 0, 0, 0.096);
+}
+.container-btn{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 3%;
+    margin-bottom: 20px;
+}
+.btn{
+    background-color: rgba(206, 206, 206, 0.596);
+    border:none;
+    border-radius: 5px;
+    padding: 10%;
+    font-size: 17px;
+    color: gray;
+}
+.btn:hover{
+    background-color: orange;
+    cursor: pointer;
+    color: black;
+}
