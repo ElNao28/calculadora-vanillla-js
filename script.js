@@ -18,7 +18,11 @@ const division = document.getElementById("/");
 const potencia = document.getElementById("%");
 const result = document.getElementById("=");
 const decimal = document.getElementById(".");
-
+const mode = document.getElementById("mode");
+const pather = document.getElementById("pather");
+mode.addEventListener('click',()=>{
+  pather.classList.toggle('white');
+})
 const insertValues = (value) => {
   if (input.value.length === 1) {
     const inputVal = parseInt(input.value);

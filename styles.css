@@ -1,6 +1,17 @@
 body {
   background-color: rgb(19, 19, 19);
 }
+.white{
+  animation: setWhite 0.5s ease-out forwards;
+}
+@keyframes setWhite {
+  0%{
+
+  }
+  100%{
+    background-color: white;
+  }
+}
 .container {
   display: flex;
   align-items: center;
