@@ -148,7 +148,7 @@ division.addEventListener("click", () => {
   if (!isFoundOperation) input.value += "/";
 });
 potencia.addEventListener("click", () => {
-  //falta colocar logica
+  //Falta colocar logica
 });
 clear.addEventListener("click", () => {
   input.value = "0";

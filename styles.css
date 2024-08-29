@@ -34,14 +34,16 @@
   box-shadow: 0px 0px 20px 5px rgba(97, 160, 255, 0.733);
   border: 2px rgba(54, 129, 241, 0.637) solid;
   overflow: hidden;
-  animation: scaleCal 1s;
+  height: 10px;
+  animation: scaleCal 1s forwards;
+  animation-delay: 0.5s;
 }
 @keyframes scaleCal {
   0%{
     height: 10px;
   }
   100%{
-    height: 329px;
+    height: 350px;
   }
 }
 h1 {
