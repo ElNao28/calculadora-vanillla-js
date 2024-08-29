@@ -1,3 +1,10 @@
+h1{
+  transition: 0.5s;
+  cursor: pointer;
+}
+h1:hover{
+  transform: rotate(-2deg)
+}
 .black {
   animation: setBlack 0.5s ease-out forwards;
 }
@@ -54,7 +61,8 @@ h1 {
   font-size: 30px;
 }
 input {
-  width: 100%;
+  width: 5%;
+  opacity: 0;
   padding: 12px 20px;
   margin: 8px 0;
   border: 1px solid #ccc;
@@ -63,6 +71,19 @@ input {
   font-size: 25px;
   font-family: monospace;
   color: gray;
+  animation: inputExpand 0.5s ease-out forwards;
+  animation-delay: 1.5s;
+}
+@keyframes inputExpand {
+  0%{
+    display: none;
+    width: 5%;
+    opacity: 1;
+  }
+  100%{
+    width: 100%;
+    opacity: 1;
+  }
 }
 input:focus {
   outline: none;
